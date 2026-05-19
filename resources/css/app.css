@@ -1,0 +1,198 @@
+/* Hotel reservation UI (assignment wireframe + readable styling) */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.hotel-body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, sans-serif;
+    color: #111827;
+    background: #f3f4f6;
+}
+
+.hotel-shell {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 1rem 2rem;
+}
+
+.hotel-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.hotel-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.hotel-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.hotel-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #374151;
+}
+
+.hotel-field input {
+    width: 7rem;
+    padding: 0.45rem 0.5rem;
+    border: 1px solid #111827;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.hotel-btn {
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #111827;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.hotel-btn:hover {
+    background: #e5e7eb;
+}
+
+.hotel-btn-primary {
+    background: #111827;
+    color: #fff;
+}
+
+.hotel-btn-primary:hover {
+    background: #374151;
+}
+
+.hotel-message {
+    min-height: 1.25rem;
+    margin: 0 0 0.75rem;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.hotel-message--error {
+    color: #b91c1c;
+    font-weight: 600;
+}
+
+.hotel-layout {
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch;
+    padding: 0.75rem;
+    border: 2px solid #111827;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.hotel-lift {
+    width: 2.5rem;
+    min-width: 2.5rem;
+    border: 1px solid #111827;
+    border-radius: 2px;
+    background: repeating-linear-gradient(
+        180deg,
+        #f9fafb,
+        #f9fafb 10px,
+        #e5e7eb 10px,
+        #e5e7eb 12px
+    );
+}
+
+.hotel-rows {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.hotel-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.35rem;
+}
+
+.hotel-cell {
+    flex: 0 0 auto;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 1px solid #111827;
+    border-radius: 2px;
+    font-size: 0.62rem;
+    line-height: 1;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #fff;
+    color: #111827;
+}
+
+.hotel-cell--free {
+    background: #fff;
+}
+
+.hotel-cell--blocked {
+    background: #9ca3af;
+    color: #111827;
+}
+
+.hotel-cell--booked {
+    background: #2563eb;
+    color: #fff;
+    border-color: #1d4ed8;
+}
+
+.hotel-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #374151;
+}
+
+.swatch {
+    display: inline-block;
+    width: 0.85rem;
+    height: 0.85rem;
+    border: 1px solid #111827;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+    border-radius: 2px;
+}
+
+.swatch-free {
+    background: #fff;
+}
+
+.swatch-blocked {
+    background: #9ca3af;
+}
+
+.swatch-booked {
+    background: #2563eb;
+}

@@ -18,11 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('oauth')->group(function () {
     Route::post('login', [AuthenticateController::class, 'login'])->name('login');
-    // Route::post('password', [PasswordController::class, 'password'])->name('password');
-    // Route::patch('password', [PasswordController::class, 'resetPassword'])->name('reset.password');
-    // Route::patch('set-password', [PasswordController::class, 'setPassword'])->name('set.password');
-    // Route::post('verify-issued-token', [PasswordController::class, 'verifyIssuedToken'])->name('verify.issued.token');
-    // Route::post('onboard-verify-issued-token', [PasswordController::class, 'verifyOnboardIssuedToken'])->name('verify.onboard.token');
+
 });
 
 Route::middleware('auth:sanctum')->group(function () {
